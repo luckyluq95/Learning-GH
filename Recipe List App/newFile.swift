@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct myModel {
+struct MyModel {
     var name: String?
 }
