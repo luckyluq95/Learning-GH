@@ -22,7 +22,8 @@ struct RecipeListView: View {
         NavigationView {
             List(model.recipes) {r in
                 
-                NavigationLink(destination: Text("destination"), label: {
+                NavigationLink(destination:
+                                RecipeDetailView(recipe: r) , label: {
                     HStack(spacing: 20.0) {
                         Image(r.image)
                             .resizable()
@@ -32,16 +33,15 @@ struct RecipeListView: View {
                             .cornerRadius(5)
                         Text(r.name)
                     }
-                    )
+                })
                 
-                    }
+                    }.navigationBarTitle("All Recipes")
                                
-                               )
-
                 
             }
-            .navigationBarTitle("All Recipes")
+            
         }
+    }
  
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
