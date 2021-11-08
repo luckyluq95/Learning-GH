@@ -15,7 +15,9 @@ struct RecipeListView: View {
     //create a brand new instance of recipemodel
     //this is observinbg the RecipeModel. if there is a change, it will receive it here and update the UI
     //here we are sending the model as an observed object
-    @ObservedObject var model = RecipeModel()
+    ////@ObservedObject var model = RecipeModel()
+    
+    @EnvironmentObject var model:RecipeModel
     
     var body: some View {
         
